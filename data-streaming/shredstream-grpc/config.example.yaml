@@ -1,0 +1,22 @@
+# gRPC endpoint of the Shredstream
+endpoint: https://solana-shredstream-grpc.rpcfast.com:443
+x_token: "your-token-here"
+
+# Optional auth token, sent as the `x-token` metadata header.
+# x_token: "your-token-here"
+
+# Keep transactions that touch at least one of these accounts.
+# Leave empty (or omit) to disable include-filtering.
+account_include:
+  - pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA
+
+# Drop transactions that touch any of these accounts.
+account_exclude: []
+
+# true  -> keep only vote transactions
+# false -> drop vote transactions
+# unset -> keep both
+vote: false
+
+# tonic channel buffer size in bytes. Default is 4 MiB (4194304).
+# buffer_size: 4194304
